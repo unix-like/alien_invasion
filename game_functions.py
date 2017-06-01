@@ -96,6 +96,9 @@ def create_fleet(ai_settings,screen,ship,aliens):
             # 创建一个外星人并将其加入当前行
             create_alien(ai_settings,screen,aliens,alien_number,row_number)
 
+def update_aliens(aliens):
+    """更新外星人群中所有外星人的位置"""
+    aliens.update()
 
 
 
