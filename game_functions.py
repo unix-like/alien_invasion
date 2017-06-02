@@ -145,7 +145,7 @@ def change_fleet_direction(ai_settings,aliens):
 
 def ship_hit(ai_settings,stats,screen,ship,aliens,bullets):
     """响应被外星人撞到的飞船"""
-    if stats.ship_left > 0:
+    if stats.ships_left > 0:
         stats.ships_left -= 1
 
         # 清空外星人列表和子弹列表
