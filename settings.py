@@ -24,6 +24,8 @@ class Settings():
         # 以什么样的速度加快节奏
         self.speedup_scale = 1.1
         self.initialize_dynamic_settings()
+        # 记分
+        self.alien_points = 50
 
     def initialize_dynamic_settings(self):
         """初始化随游戏进行而变化的设置"""
