@@ -1,14 +1,19 @@
 class GameStats():
-    """跟踪游戏的统计信息"""
-
-    def __init__(self,ai_settings):
-        """初始化统计信息"""
+    """Track statistics for Alien Invasion."""
+    
+    def __init__(self, ai_settings):
+        """Initialize statistics."""
         self.ai_settings = ai_settings
         self.reset_stats()
-        # 游戏刚启动时处于活动状态
+        
+        # Start game in an inactive state.
         self.game_active = False
-
+        
+        # High score should never be reset.
+        self.high_score = 0
+        
     def reset_stats(self):
-        """初始化在游戏运行期间可能变化的统计信息"""
+        """Initialize statistics that can change during the game."""
         self.ships_left = self.ai_settings.ship_limit
         self.score = 0
+        self.level = 1
